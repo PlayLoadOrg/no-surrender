@@ -540,7 +540,7 @@ canvas{display:block;width:100%;height:100%;}
   <div class="title-divider"></div>
   <div class="title-desc">
     THE ENEMY DOES NOT RUN OUT OF AMMUNITION.<br>
-    NEITHER DO YOU STOP FIRING.
+    YOU DO NOT STOP FIRING.
   </div>
   <button id="begin-btn" class="action-btn" onclick="showBriefing()">ENTER</button>
   <div class="title-footer">Dedicated to those who chose sacrifice, that we may find peace.</div>
@@ -810,23 +810,23 @@ const CFG = {
 // ── Night names & checkpoint messages ──
 const NIGHTS = [
   { name:'FIRST CONTACT',       checkpoint:'' },
-  { name:'HOLDING THE LINE',    checkpoint:'Nothing of the adversary got past you.\nYou\'ve saved countless civilians today.\nThey will never know. We will never forget.' },
-  { name:'SECOND WAVE',         checkpoint:'You\'ve bought us time to evacuate three platoons.\nBut there are still so many more to go.' },
-  { name:'BEFORE DAWN',         checkpoint:'I don\'t know how much longer you can hold out,\nbut every minute saves lives.' },
-  { name:'THE LONG NIGHT',      checkpoint:'They keep sending more. You keep firing.\nSomewhere behind you, people are still breathing.' },
-  { name:'NO RELIEF INCOMING',  checkpoint:'Command has no reinforcements to send.\nYou are what stands between them and morning.' },
-  { name:'GHOST SHIFT',         checkpoint:'You should have been relieved hours ago.\nYou\'re still here. That means something.' },
-  { name:'IRON SKIES',          checkpoint:'The targeting systems are overheating.\nYour hands are steadier than they should be.' },
-  { name:'STATIC AND FIRE',     checkpoint:'Radio is down. You\'re operating blind.\nYou fire anyway. That\'s what this is.' },
-  { name:'LAST RESERVES',       checkpoint:'Ammunition is critical.\nEvery round you fire is a round someone begged for.' },
-  { name:'BEYOND ORDERS',       checkpoint:'There are no more orders coming.\nThere is only what you choose to do next.' },
-  { name:'THE VIGIL',           checkpoint:'They asked you how long you could hold.\nYou stopped answering. You just kept holding.' },
+  { name:'HOLDING THE LINE',    checkpoint:'The enemy only probes.\nFor now. They will not stop. Nor will you.' },
+  { name:'MOMENTO MORI',        checkpoint:'\"What\'s going to happen,\" the rookie asks you.\n\"We fire till there\'s nothing left,\" you answer' },
+  { name:'CARRY ON',            checkpoint:'The radio is heavily jammed. \"I don\'t know how much longer you can hold out,\nbut every minute saves lives.\"' },
+  { name:'THE LONG NIGHT',      checkpoint:'They keep sending more. You keep firing.\nSomewhere behind you, people keep breathing.' },
+  { name:'NO RELIEF INCOMING',  checkpoint:'Command has no reinforcements to send.\nDistortion is all you hear on the radio.' },
+  { name:'SKY ON FIRE',         checkpoint:'They will begin unleashing with full force now.\nIt is only a matter of time. But time buys lives.' },
+  { name:'BEYOND HOPE',         checkpoint:'The rookie\'s fear has been replaced with grim resignation and cold efficiency.\nHe is beginning to understand.' },
+  { name:'RELENTLESS',          checkpoint:'Either your targetting systems are overloading\nOr there is no end to the enemy barrage.' },
+  { name:'LAST ROUNDS',         checkpoint:'Ammunition is critical.\nEvery round you fire is irreplaceable.' },
+  { name:'TO THE LAST',         checkpoint:'No order to retreat ever came.\nNo path out remains. ' },
+  { name:'THE VIGIL',           checkpoint:'The civilians you saved will never know.\nThe brothers whose retreat you covered will never forget.' },
 ];
 
 function getNight(n){
   // cycle through named nights, last one repeats with escalating number
   if(n<=NIGHTS.length) return NIGHTS[n-1];
-  return { name:`NIGHT ${n}`, checkpoint:'The sky never empties. Neither do you.' };
+  return { name:`NIGHT ${n}`, checkpoint:'A night will come when you have no fight left to give. But that night is not tonight.' };
 }
 
 function showBriefing(){
